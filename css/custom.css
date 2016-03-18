@@ -206,6 +206,7 @@ h1 {
   font-weight: 100;
 }
 .sheet-5 input[type="text"] {
+  font-weight: normal;
   padding: 8px;
   color: black;
   background: #FFFFFF;
@@ -238,7 +239,7 @@ h1 {
 .slide .item1 img {
   width: 95%;
 }
-.slide .item1 .slide-title {
+.slide .item1 div.slide-title {
   margin-top: 10px;
   margin-bottom: 10px;
 }
@@ -269,6 +270,7 @@ h1 {
   background: url("../img/next.png");
 }
 .footer {
+  overflow: hidden;
   padding: 20px 0px;
   text-align: center;
 }
@@ -395,7 +397,7 @@ a:hover {
 }
 @media only screen and (max-width: 620px) {
   .option3 .but {
-    height: 75px;
+    height: 70px;
   }
   .skip.overr {
     width: 120px;
@@ -493,4 +495,16 @@ a:hover {
 }
 .goBold {
   font-weight: bolder !important;
+}
+.footer .item1 {
+  overflow: hidden;
+}
+.slide-title {
+  position: relative;
+  top: -30px;
+  background: url("../img/trans.png");
+  color: white;
+  padding: 10px;
+  margin-left: 0px;
+  margin-right: 10px;
 }

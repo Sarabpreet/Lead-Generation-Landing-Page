@@ -208,8 +208,9 @@ console.log("update has been called : ");
 
     var ref = new Firebase("https://landingwa.firebaseio.com/main");
     ref.push({
-      Age:$('#Age').val(),
-      Number: $('.number').val(),
+      Year:$('#Age').val(),
+      Travel:$('#travel').val(),
+      Budget: $('.number').val(),
       Important:$('.butthurt .selected').text(),
       Type:$('.option3 p.goBold').text(),
       Details:{name:$('.Fname').val(),number:$('.Num').val()}
