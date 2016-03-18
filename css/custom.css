@@ -104,6 +104,8 @@ h1 {
   color: gray;
   padding: 10px;
   font-weight: 200;
+  /* Rectangle 10 Copy 4: */
+  border-radius: 6px;
 }
 .header .sheet-1 h2,
 .header .sheet-2 h2,
@@ -393,7 +395,7 @@ a:hover {
 }
 @media only screen and (max-width: 620px) {
   .option3 .but {
-    height: 70px;
+    height: 75px;
   }
   .skip.overr {
     width: 120px;
@@ -419,7 +421,7 @@ a:hover {
     padding: 10px;
   }
   .but {
-    width: 100%;
+    width: 102%;
     margin: 8px auto;
     height: 50px;
     padding: 15px 0px;
@@ -444,7 +446,7 @@ a:hover {
     padding: 0px 50px;
   }
   .butthurt.visible-xs .but {
-    width: 105% !important;
+    width: 100% !important;
     padding: 15px 0px;
     margin-top: 0px;
     height: 50px;
