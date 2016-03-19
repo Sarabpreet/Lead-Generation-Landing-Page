@@ -34,7 +34,7 @@ body {
   z-index: 110;
 }
 h1 {
-  font-size: 36px;
+  font-size: 30px;
   color: #FFFFFF;
   padding: 10px;
   margin-bottom: -50px;
@@ -396,6 +396,24 @@ a:hover {
   }
 }
 @media only screen and (max-width: 620px) {
+
+
+  
+  .coup{
+    width: 200px !important;
+    margin-left: -30px !important;
+  }
+
+ 
+.list-credr {
+ margin-top: 15px !important;
+    margin-left: -40px !important;
+}
+
+  
+.list-credr li {
+width: 100%;
+}
   .option3 .but {
     height: 70px;
   }
@@ -412,7 +430,7 @@ a:hover {
   }
   h1 {
     font-size: 18px;
-    padding: 10px;
+    padding: 5px;
   }
   .skip {
     top: 7px !important;
@@ -420,7 +438,7 @@ a:hover {
   h2 {
     font-size: 14px !important;
     margin-bottom: 0px !important;
-    padding: 10px;
+    padding: 5px;
   }
   .but {
     width: 102%;
@@ -457,6 +475,8 @@ a:hover {
     display: none;
   }
 }
+
+
 .sheet-6 {
   display: none;
   text-align: center;
@@ -520,3 +540,43 @@ box-shadow: 0 0 5px 1px #1a1a1a;
 
 
 
+
+
+.orange{
+color: #FF7D39;
+}
+
+.coup{
+
+  background: url("../img/coupon.png") center #FF7D39;
+  width: 100%;
+  background-size: cover;
+  height: 75px;
+  display: block;
+  border-radius: 3px;
+  margin: 0 auto;
+  background-size: 240px;
+  max-width: 260px !important;
+   /*background: #FF7D39;*/
+}
+
+.list-credr {
+  
+  text-align: left;
+}
+
+.list-credr {
+
+  list-style-type: none;
+  margin-top: -10px;
+}
+.list-credr li {
+  
+    background: url("../img/circle.png");
+    background-repeat: no-repeat;
+    background-position: 0 0.6em;
+    padding-left: 2.2em;
+    margin: 2px 7px;
+    padding-top: 8px;
+}
+  
