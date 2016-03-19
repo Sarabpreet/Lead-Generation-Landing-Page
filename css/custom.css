@@ -467,19 +467,19 @@ a:hover {
   margin-top: 20px !important;
 }
 .but.type1 {
-  background: url('../img/type/type1.png') no-repeat;
+  background: url('../img/type/type1.png') white no-repeat;
   background-size: cover;
 }
 .but.type2 {
-  background: url('../img/type/type2.png') no-repeat;
+  background: url('../img/type/type2.png') white no-repeat;
   background-size: cover;
 }
 .but.type3 {
-  background: url('../img/type/type34.png') no-repeat;
+  background: url('../img/type/type34.png') white no-repeat;
   background-size: cover;
 }
 .but.type4 {
-  background: url('../img/type/type4.png') no-repeat;
+  background: url('../img/type/type4.png') white no-repeat;
   background-size: cover;
 }
 .option3 {
@@ -508,3 +508,15 @@ a:hover {
   margin-left: 0px;
   margin-right: 10px;
 }
+.but{
+
+  background:white;
+}
+.but:hover{
+  -webkit-box-shadow: 0 0 5px 1px #1a1a1a;
+box-shadow: 0 0 5px 1px #1a1a1a;
+  
+}
+
+
+
