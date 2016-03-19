@@ -34,7 +34,7 @@ body {
   z-index: 110;
 }
 h1 {
-  font-size:28px;
+  font-size:27px;
   color: #FFFFFF;
   padding: 10px;
   margin-bottom: -50px;
@@ -46,7 +46,7 @@ h1 {
 .header .logo {
   background: url("../img/logo.png") no-repeat;
   width: 183px;
-  height: 83px;
+  height: 87px;
 }
 .header h1,
 .header h2 {
@@ -397,7 +397,12 @@ a:hover {
 }
 @media only screen and (max-width: 620px) {
 
-
+.logo {
+  background: url("../img/logo-m.png") no-repeat !important;
+  width: 69px !important;
+  height:42px !important;
+  background-size: cover;
+}
   
   .coup{
     width: 200px !important;
@@ -416,6 +421,7 @@ width: 100%;
 }
   .option3 .but {
     height: 70px;
+    border-radius: 4px;
   }
   .skip.overr {
     width: 120px;
@@ -430,13 +436,14 @@ width: 100%;
   }
   h1 {
     font-size: 18px;
+    line-height: 24px;
     padding: 5px;
   }
   .skip {
     top: 7px !important;
   }
   h2 {
-    font-size: 14px !important;
+    font-size: 13px !important;
     margin-bottom: 0px !important;
     padding: 5px;
   }
@@ -487,25 +494,28 @@ width: 100%;
   margin-top: 20px !important;
 }
 .but.type1 {
-  background: url('../img/type/type1.png') white no-repeat;
+  background: url('../img/type/type1.png') top center white no-repeat;
   background-size: cover;
 }
 .but.type2 {
-  background: url('../img/type/type2.png') white no-repeat;
+  background: url('../img/type/type2.png') top center white no-repeat;
   background-size: cover;
 }
 .but.type3 {
-  background: url('../img/type/type34.png') white no-repeat;
+  background: url('../img/type/type34.png') top center white no-repeat;
   background-size: cover;
 }
 .but.type4 {
-  background: url('../img/type/type4.png') white no-repeat;
+  background: url('../img/type/type4.png') top center white no-repeat;
   background-size: cover;
 }
 .option3 {
   margin-top: -10px;
   text-align: center;
 }
+  .option3 .but {
+    border-radius: 5px;
+  }
 .option3 p {
   font-weight: 400;
 }
@@ -580,3 +590,12 @@ color: #FF7D39;
     padding-top: 8px;
 }
   
+.ol{
+
+  padding-top: 10px;
+}
+
+.ol a {
+color: #FF7D39;
+text-decoration: underline;
+}
