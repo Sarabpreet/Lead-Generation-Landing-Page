@@ -213,8 +213,9 @@ console.log("update has been called : ");
       Budget: $('.number').val(),
       Important:$('.butthurt .selected').text(),
       Type:$('.option3 p.goBold').text(),
-      Details:{name:$('.Fname').val(),number:$('.Num').val()}
-      
+      Name:$('.Fname').val(),
+      Number:$('.Num').val(),
+      Time:Firebase.ServerValue.TIMESTAMP,
 
    
     });

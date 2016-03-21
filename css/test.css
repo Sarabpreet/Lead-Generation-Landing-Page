@@ -1,0 +1,102 @@
+.header-admin {
+
+
+
+/* Rectangle 1: */
+background-image: linear-gradient(-179deg, #4E84C0 0%, #6619DD 100%);
+padding:50px;
+text-align: center;
+color:white;
+
+margin-bottom: 30px;
+}
+
+p{
+  
+	padding:20px;
+}
+
+
+.para{
+	
+	
+	font-size: 12px;
+	color: gray;
+	padding:0px;
+}
+
+
+h2{
+font-size:48px;
+
+}
+
+h5{
+	border-radius:5px;
+  font-size: 20px;
+  background-image: linear-gradient(-266deg, #4F7EDB 0%, #844FD5 87%);
+	padding:20px;
+	color:white;
+	cursor: pointer;
+}
+
+
+.us-pw {
+	position: relative;
+	display: block;
+	width:50px;
+	margin:0 auto;
+	text-align: center;
+	padding-bottom: : 60px;
+}
+
+
+input {
+	font-size: 20px;
+	width:400px;
+	height: 50px;
+	margin: 5px auto;
+	padding: 10px 20px;
+	border-radius:4px;
+}
+
+input[type="submit"]
+{
+	
+	/* Rectangle 1: */
+background-image: linear-gradient(-180deg, #35CCA0 0%, #4B87AC 100%);
+	border: 0;
+  color:white;
+
+	text-transform: uppercase;
+
+}
+input[type="submit"]:hover{
+	
+border: 0;
+  color:white;
+background-image: linear-gradient(-180deg, #25876A 0%, #4B87AC 100%);
+	
+}
+
+
+
+a.withoutaddress,a.peoplewithaddress {
+	
+/* Rectangle 1: */
+background-image: linear-gradient(-180deg, #C8F0E8 6%, #F8F8F8 100%);
+font-size:16px;
+color:#6E6E6E;
+text-transform: uppercase;
+	border-radius:5px;
+	padding:20px;
+	text-decoration: none;
+
+}
+a:hover{
+	color:black;
+background-image: linear-gradient(-180deg, #D4EDE8 6%, #F8F8F8 100%);
+	
+}	
+	display: none;
+}

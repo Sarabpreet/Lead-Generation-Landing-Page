@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Off Ok Please : An Initiative by CredR</title>
+    <!-- Bootstrap -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/test.css">
+    <link rel="stylesheet" href="css/ani.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link href="img/favicon.png" type="image/png" rel="shortcut icon" sizes="16x16">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div id="wra">
+      <div  class="container-fluid header-admin" >
+        <h2>Admin Panel</h2>
+        <div id="Wadd"></div>
+        <div id="add"></div>
+        <img src="img/logo.png" alt="">
+<!--         <p>So far we have <span class="count animated pulse infinite">0</span> people who said #offOkPlease</p>
+
+        <a href="#" class="withoutaddress">Without Address</a>
+        <a href="#" class="peoplewithaddress">With Address</a>
+ -->      </div>
+      <style>
+
+
+
+ 
+      .us-pw{
+      width: 60%;
+      margin: 0 auto;
+      }
+.header-admin {
+  
+  text-align: center;
+}
+
+
+
+      </style>
+      <div class="row">
+        
+        <div class="us-pw">
+          
+          <legend> Username: </legend> <input type="text" id="ema" placeholder="Email Id"><br>
+          <legend> Password: </legend> <input type="password" id="pas" placeholder="Password"><br>
+          <br>
+          <p class="para">*You would have to click submit, instead of hitting (enter)</p>
+          <input type="submit" class="subm" value="see pledge">
+        </div>
+      </div>
+      <div id="tRow" class="container"><div class="row">
+        <div class="col-lg-12">
+          
+          <h5>Entries </h5>
+         
+<div class="export_table1">
+            <table class="table table-hover ">
+              <thead>
+                <tr>
+    <!--               <th>Years</th>
+                  <th>Budget</th>
+                  <th>Type</th>
+                 <th>Important</th>
+                  <th>Name</th>
+                 <th>Comment</th> -->
+                      
+<th>Time</th>
+<th>Budget</th>    
+<th>Important For User</th>
+<th>Type</th> 
+<th>Travel (in KMS)</th>
+<th>Years</th>
+<th>Name</th>
+<th>Number</th>
+
+
+                </tr>
+              </thead>
+              <tbody id="Insert-address">
+                
+              </tbody>
+            </table>
+   </div>
+         
+        </div>
+<!--         <div class="col-lg-4">
+          <h5 >Pledge (<span class="pleg"></span>)</h5>
+
+<div class="export_table2">
+
+            <table class="table table-hover export_table2">
+              <thead>
+                <tr>
+                  <th>Date</th>
+                  <th>Name</th>
+                  <th>Mobile</th>
+                  
+                </tr>
+              </thead>
+              <tbody id="Insert">
+                
+              </tbody>
+            </table>
+  </div>
+        </div> -->
+
+
+
+      </div>
+    </div>
+  </div>
+<!--   <script src="js/jq.js"></script> -->
+
+<script src="js/jq.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.4.0/firebase.js"></script>
+<script src="js/csv.js"></script>
+
+  <script>
+  var ins=document.querySelector("#Insert");
+  var countD=document.querySelector(".count");
+  var withAdd=document.querySelector(".peoplewithaddress");
+  var noAdd=document.querySelector(".withoutaddress");
+  var insA=document.querySelector("#Insert-address");
+  var bump=document.querySelector(".bump");
+  var pleg=document.querySelector(".pleg");
+  var ref = new Firebase("https://offkpls.firebaseio.com");
+  var countPledge=0;
+  var countBumpeer=0;
+  var x1=0;
+  // var refC=new Firebase("https://offkpls.firebaseio.com/count");
+  var node;
+  var tRow=document.querySelector('#tRow');
+  var usernameB=document.querySelector('.us-pw');
+  var sub=document.querySelector(".subm");
+  var email=document.querySelector("#ema");
+  var pass=document.querySelector("#pas");
+  var passw;
+  var emailw;
+  sub.addEventListener('click',authenticate);
+  tRow.className=tRow.className+" hide";
+
+  function authenticate(){
+  usernameB.className=' us-pw';
+  emailw=email.value;
+  passw=pass.value;
+  firebaseThing();
+  }
+  </script>
+  <!-- DEVELOPMENT SCRIPT ENDS HERE -->
+  <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script> 
+  function firebaseThing(){
+  console.log("hi there");
+  var ref = new Firebase("https://landingwa.firebaseio.com/main");
+  ref.authWithPassword({
+  email    : emailw,
+  password : passw
+  }, function(error, authData) {
+  remember: "sessionOnly"
+  if (error) {
+  console.log("Login Failed!", error);
+  usernameB.className=usernameB.className+" animated shake";
+  } else {
+  
+  // console.log("Authenticated successfully with payload:", authData);
+  usernameB.className=' us-pw hide';
+  tRow.className=tRow.className+" show";
+  
+  ref.on("child_added", function(snapshot, prevChildKey) {
+  var newPost = snapshot.val();
+
+
+
+  // if(newPost.Address==undefined) {
+
+
+
+  // var node='<td>'+x1+'</td><td>'+newPost.Name+'</td><td>'+newPost.Mobile+'</td>';
+  // var tr=document.createElement("tr");
+  // tr.innerHTML=node;
+  // ins.appendChild(tr);
+  // countPledge++;
+  // pleg.innerHTML=countPledge;
+  // // console.log(newPost.timestamp);
+
+
+
+  // }
+  // else {
+
+var time = moment(newPost.Time).format("DD-MM-YYYY h:mm:ss");
+
+  var node='<td>'+time+'</td><td>'+newPost.Budget+'</td><td>'+newPost.Important+'</td><td>'+newPost.Type+'</td><td>'+newPost.Travel+'</td><td>'+newPost.Year+'</td><td>'+newPost.Name+'</td><td>'+newPost.Number+'</td>';
+  var tr=document.createElement("tr");
+  tr.innerHTML=node;
+  insA.appendChild(tr);
+  // countBumpeer++;
+  // bump.innerHTML=countBumpeer;
+  
+  // }
+  
+  
+  });
+
+
+
+  
+  // after authentication ends here....
+  }
+  });
+
+
+  }
+
+
+  withAdd.addEventListener('click',export_csv_address);
+  noAdd.addEventListener('click',export_csv);
+
+
+
+  </script>
+  <script src="js/moment.js"></script>
+  <script src="js/custom.js"></script>
+  <script src="js/smooth-scroll.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+
+  
+</body>
